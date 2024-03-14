@@ -14,5 +14,4 @@ public interface CashierService {
     List<CashierResponse> getAllCashier ();
 
     CashierResponse updateCashier (Cashier cashier);
-    void deleteCashier (Integer id);
 }

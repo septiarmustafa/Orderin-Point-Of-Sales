@@ -70,8 +70,4 @@ public class AdminServiceImpl implements AdminService {
         }
         return null;
     }
-    @Override
-    public void deleteAdmin(Integer id) {
-        adminRepository.deleteById(id);
-    }
 }

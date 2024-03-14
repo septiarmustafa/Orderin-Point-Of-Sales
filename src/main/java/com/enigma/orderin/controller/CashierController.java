@@ -1,10 +1,8 @@
 package com.enigma.orderin.controller;
 
 import com.enigma.orderin.constant.AppPath;
-import com.enigma.orderin.dto.request.ProductRequest;
 import com.enigma.orderin.dto.response.CashierResponse;
 import com.enigma.orderin.dto.response.CommonResponse;
-import com.enigma.orderin.dto.response.ProductResponse;
 import com.enigma.orderin.entity.Cashier;
 import com.enigma.orderin.service.CashierService;
 import lombok.RequiredArgsConstructor;

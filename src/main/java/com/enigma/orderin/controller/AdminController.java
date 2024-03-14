@@ -2,10 +2,8 @@ package com.enigma.orderin.controller;
 
 import com.enigma.orderin.constant.AppPath;
 import com.enigma.orderin.dto.response.AdminResponse;
-import com.enigma.orderin.dto.response.CashierResponse;
 import com.enigma.orderin.dto.response.CommonResponse;
 import com.enigma.orderin.entity.Admin;
-import com.enigma.orderin.entity.Cashier;
 import com.enigma.orderin.service.AdminService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

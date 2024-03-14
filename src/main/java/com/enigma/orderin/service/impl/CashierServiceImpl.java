@@ -70,9 +70,4 @@ public class CashierServiceImpl implements CashierService {
        }
        return null;
     }
-
-    @Override
-    public void deleteCashier(Integer id) {
-        cashierRepository.deleteById(id);
-    }
 }
