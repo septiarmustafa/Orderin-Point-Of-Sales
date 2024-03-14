@@ -4,6 +4,7 @@ import com.enigma.orderin.dto.response.CashierResponse;
 import com.enigma.orderin.entity.Cashier;
 import com.enigma.orderin.repository.CashierRepository;
 import com.enigma.orderin.service.CashierService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,56 +19,41 @@ public class CashierServiceImpl implements CashierService {
 
     @Override
     public CashierResponse createCashier(Cashier cashier) {
-        Cashier cashiers = cashierRepository.saveAndFlush(cashier);
+        cashierRepository.createCashier(cashier.getName(), cashier.getPhoneNumber());
         return CashierResponse.builder()
-                .id(cashiers.getId())
-                .name(cashiers.getName())
-                .mobilePhone(cashiers.getPhoneNumber())
+                .id(cashier.getId())
+                .name(cashier.getName())
+                .mobilePhone(cashier.getPhoneNumber())
                 .build();
     }
 
     @Override
     public CashierResponse getById(Integer id) {
-        Cashier customer = cashierRepository.findById(id).orElse(null);
-
-        if (customer == null) {
-            return null;
-        }
-        return CashierResponse.builder()
-                .id(customer.getId())
-                .name(customer.getName())
-                .mobilePhone(customer.getPhoneNumber())
-                .build();
+        return cashierRepository.getCashierById(id)
+                .map(cashier -> CashierResponse.builder()
+                        .id(cashier.getId())
+                        .name(cashier.getName())
+                        .mobilePhone(cashier.getPhoneNumber())
+                        .build())
+                .orElse(null);
     }
 
     @Override
     public List<CashierResponse> getAllCashier() {
-        List<Cashier> listCashier = cashierRepository.findAll();
+        List<Cashier> listCashier = cashierRepository.getAllCashier();
         return listCashier.stream().map(
-                cashier -> CashierResponse.builder()
-                .id(cashier.getId())
-                .name(cashier.getName())
-                .mobilePhone(cashier.getPhoneNumber())
-                .build())
+                        admin -> CashierResponse.builder()
+                                .id(admin.getId())
+                                .name(admin.getName())
+                                .mobilePhone(admin.getPhoneNumber())
+                                .build())
                 .collect(Collectors.toList());
     }
 
     @Override
+    @Transactional
     public CashierResponse updateCashier(Cashier cashier) {
-       Cashier cashiers = cashierRepository.findById(cashier.getId()).orElse(null);
-       if (cashiers != null) {
-           cashiers = Cashier.builder()
-                .id(cashier.getId())
-                .name(cashier.getName())
-                .phoneNumber(cashier.getPhoneNumber())
-                .build();
-           cashierRepository.save(cashiers);
-           return CashierResponse.builder()
-                   .id(cashiers.getId())
-                   .name(cashiers.getName())
-                   .mobilePhone(cashiers.getPhoneNumber())
-                   .build();
-       }
-       return null;
+        cashierRepository.updateCashier(cashier.getName(), cashier.getPhoneNumber(), cashier.getId());
+        return getById(cashier.getId());
     }
 }
