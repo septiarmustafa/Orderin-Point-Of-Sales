@@ -9,6 +9,8 @@ public class AppPath {
     public final static String ID_PRODUCT = "/{id_product}";
     public final static String ID_ORDER = "/{id_order}";
     public final static String ADMIN = "/admin";
+    public final static String ID_ADMIN = "/{id_admin}";
+    public final static String ID_CASHIER = "/{id_cashier}";
     public final static String CASHIER = "/cashier";
     public final static String PRODUCT = "/product";
     public final static String ORDER = "/order";
