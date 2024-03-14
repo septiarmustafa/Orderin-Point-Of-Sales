@@ -1,0 +1,1931 @@
+{
+	"info": {
+		"_postman_id": "051ca9bd-3d2d-4daa-87c6-b6035eedf9be",
+		"name": "Orderin POS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31047423"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"baimadmin@gmail.com\",\n    \"password\" : \"baim123\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/api/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"tiaradmin@gmail.com\",\n    \"password\" : \"tiar123\"\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/api/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 12:29:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully login\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6ImNmYmNiMjU4LTNkM2QtNGQ0ZS04NTJlLWE0MjA0Mzk4ZDI1NSIsImV4cCI6MTcwNDU0Nzc0NSwiaWF0IjoxNzA0NTQ0MTQ1LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.WDSKQAYjISKk8OxG4VpnWDQ1Odr_8cs3omO5zVswzn8\",\n        \"role\": \"ROLE_ADMIN\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"tiarrr@gmail.com\",\n    \"password\" : \"tiar123\",\n    \"name\" : \"sep\",\n    \"phoneNumber\" : \"08138699\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/api/auth/admin/register"
+					},
+					"response": [
+						{
+							"name": "Register Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"tiaradmin@gmail.com\",\n    \"password\" : \"tiar123\",\n    \"name\" : \"tiar admin\",\n    \"phoneNumber\" : \"08080808\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/api/auth/admin/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 12:28:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully register\",\n    \"data\": {\n        \"email\": \"tiaradmin@gmail.com\",\n        \"role\": \"ROLE_ADMIN\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register Cashier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"tiaradmin\",\n    \"password\" : \"tiar123\",\n    \"name\" : \"tiar admin\",\n    \"phoneNumber\" : \"08080808\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/api/auth/admin/register"
+					},
+					"response": [
+						{
+							"name": "Register Cashier",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"baimcashier@gmail.com\",\n    \"password\" : \"baim123\",\n    \"name\" : \"baim cashier\",\n    \"phoneNumber\" : \"0877\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/api/auth/cashier/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Jan 2024 12:56:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully register\",\n    \"data\": {\n        \"email\": \"baimcashier@gmail.com\",\n        \"role\": \"ROLE_CASHIER\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product and Price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcwNDcxNTMyOSwiaWF0IjoxNzA0NzExNzI5LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.dt3ezch0O5c0B2_MDgA88bUWHnGvAhZkdRkQKebhBak"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productName\" : \"Jus Mangga\",\n    \"price\" : 1000,\n    \"stock\" : 12\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/product"
+					},
+					"response": [
+						{
+							"name": "Create Product and Price",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"productName\" : \"Americano\",\n    \"price\" : 1000,\n    \"stock\" : 10\n}\n\n\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/product"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jan 2024 09:50:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully create new product\",\n    \"data\": {\n        \"productId\": 20,\n        \"productName\": \"Americano\",\n        \"price\": 1000,\n        \"stock\": 10,\n        \"isActive\": true\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcxMDM5MzI2NywiaWF0IjoxNzEwMzg5NjY3LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.oGuMXueII3BpU-WZ6LAmhGSEm6ZheFFoOTt4UyAnc1Q"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "localhost:8081/product"
+					},
+					"response": [
+						{
+							"name": "Get All Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "localhost:8081/product"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 06:59:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get all product\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"Teh jahe\",\n            \"productDetails\": [\n                {\n                    \"id\": 3,\n                    \"stock\": 10,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Teh jahe\",\n            \"productDetails\": [\n                {\n                    \"id\": 4,\n                    \"stock\": 10,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"name\": \"jahe\",\n            \"productDetails\": [\n                {\n                    \"id\": 5,\n                    \"stock\": 10,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"name\": \"jamu\",\n            \"productDetails\": [\n                {\n                    \"id\": 6,\n                    \"stock\": 10,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 21,\n            \"name\": \"Cappucino\",\n            \"productDetails\": [\n                {\n                    \"id\": 11,\n                    \"stock\": 10,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 22,\n            \"name\": \"Jus Anggur\",\n            \"productDetails\": [\n                {\n                    \"id\": 12,\n                    \"stock\": 11,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Jus Mangga\",\n            \"productDetails\": [\n                {\n                    \"id\": 13,\n                    \"stock\": 12,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Teh jahe\",\n            \"productDetails\": [\n                {\n                    \"id\": 2,\n                    \"stock\": 1,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        },\n        {\n            \"id\": 24,\n            \"name\": \"Jus Naga\",\n            \"productDetails\": [\n                {\n                    \"id\": 14,\n                    \"stock\": 11,\n                    \"isActive\": true,\n                    \"price\": 1000\n                }\n            ]\n        }\n    ],\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Product with Filter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcwNDcxNTMyOSwiaWF0IjoxNzA0NzExNzI5LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.dt3ezch0O5c0B2_MDgA88bUWHnGvAhZkdRkQKebhBak"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/product/page?page=0&size=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "teh",
+									"disabled": true
+								},
+								{
+									"key": "maxPrice",
+									"value": "1000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Product with Filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/product/page?page=0&size=10&name=teh&maxPrice=1000",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"product",
+										"page"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "name",
+											"value": "teh"
+										},
+										{
+											"key": "maxPrice",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 06:42:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get all product\",\n    \"data\": [\n        {\n            \"productId\": 3,\n            \"productName\": \"Teh jahe\",\n            \"price\": 1000,\n            \"stock\": 10,\n            \"isActive\": true\n        },\n        {\n            \"productId\": 4,\n            \"productName\": \"Teh jahe\",\n            \"price\": 1000,\n            \"stock\": 10,\n            \"isActive\": true\n        },\n        {\n            \"productId\": 2,\n            \"productName\": \"Teh jahe\",\n            \"price\": 1000,\n            \"stock\": 1,\n            \"isActive\": true\n        }\n    ],\n    \"paging\": {\n        \"currentPage\": 0,\n        \"totalPage\": 1,\n        \"size\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcxMDQwNjQ1OCwiaWF0IjoxNzEwNDAyODU4LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.w2riUxhwa3OdmvzxRxHCHAMczFg3tkScSV4pzoIoIR0"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\" : 1,\n    \"productName\" : \"nasi goreng gila special\",\n    \"price\" : 25500,\n    \"stock\" : 101\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/product"
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"productId\" : 1,\n    \"productName\" : \"nasi goreng\",\n    \"price\" : 15000,\n    \"stock\" : 20\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/product"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 06:42:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully update product\",\n    \"data\": {\n        \"productId\": 1,\n        \"productName\": \"nasi goreng\",\n        \"price\": 15000,\n        \"stock\": 20,\n        \"isActive\": true\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcxMDQwMjA2MiwiaWF0IjoxNzEwMzk4NDYyLCJyb2xlIjoiUk9MRV9BRE1JTiJ9.UkyJ3ysyCXrXAbg2LJmygXzMae6jqOzkGUX7wlXvITs"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": "localhost:8081/product/22"
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": "localhost:8081/product/22"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 06:41:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully delete product\",\n    \"data\": null,\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcwNDcxNTMyOSwiaWF0IjoxNzA0NzExNzI5LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.dt3ezch0O5c0B2_MDgA88bUWHnGvAhZkdRkQKebhBak"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/product/1"
+					},
+					"response": [
+						{
+							"name": "Get By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/product/22"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 06:37:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get by id product\",\n    \"data\": {\n        \"productId\": 22,\n        \"productName\": \"Jus Anggur\",\n        \"price\": 1000,\n        \"stock\": 11,\n        \"isActive\": true\n    },\n    \"paging\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcwNDcyNjY0OSwiaWF0IjoxNzA0NzIzMDQ5LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.N1MfBtMpCxdyZwAtP-UcR8h9qNgyDds0QdviksMenyQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cashierId\": 1,\n  \"orderDetailList\": [\n    {\n      \"productDetailId\": 14,\n      \"quantity\": \"1\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/order"
+					},
+					"response": [
+						{
+							"name": "Create Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cashierId\": 1,\n  \"orderDetailList\": [\n    {\n      \"productDetailId\": 2,\n      \"quantity\": \"1\"\n    },\n     {\n      \"productDetailId\": 2,\n      \"quantity\": \"1\"\n    }\n\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/order"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 15:14:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully create new order\",\n    \"data\": {\n        \"orderId\": 35,\n        \"transactionDate\": \"2024-01-08\",\n        \"cashier\": {\n            \"id\": 1,\n            \"name\": \"shendy cashier\",\n            \"mobilePhone\": \"0877\"\n        },\n        \"listOrderDetail\": [\n            {\n                \"orderDetailId\": 42,\n                \"product\": {\n                    \"productId\": 2,\n                    \"productName\": \"Teh jahe\",\n                    \"price\": 1000,\n                    \"stock\": 4,\n                    \"isActive\": true\n                },\n                \"quantity\": 1\n            },\n            {\n                \"orderDetailId\": 41,\n                \"product\": {\n                    \"productId\": 2,\n                    \"productName\": \"Teh jahe\",\n                    \"price\": 1000,\n                    \"stock\": 3,\n                    \"isActive\": true\n                },\n                \"quantity\": 1\n            }\n        ]\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcwNDcxNTMyOSwiaWF0IjoxNzA0NzExNzI5LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.dt3ezch0O5c0B2_MDgA88bUWHnGvAhZkdRkQKebhBak"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/order/1"
+					},
+					"response": [
+						{
+							"name": "Get By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/order/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 06:36:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get by id order\",\n    \"data\": {\n        \"orderId\": 1,\n        \"transactionDate\": \"2024-01-08\",\n        \"cashier\": {\n            \"id\": 1,\n            \"name\": \"shendy cashier\",\n            \"mobilePhone\": \"0877\"\n        },\n        \"listOrderDetail\": [\n            {\n                \"orderDetailId\": 6,\n                \"product\": {\n                    \"productId\": 2,\n                    \"productName\": \"Teh jahe\",\n                    \"price\": 1000,\n                    \"stock\": 1,\n                    \"isActive\": true\n                },\n                \"quantity\": 1\n            }\n        ]\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Order by CashierId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcxMDM5NTU3NSwiaWF0IjoxNzEwMzkxOTc1LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.CDZghG_YQQMs7ZZvNW0Sf5wsqeRWxXy8HMlBad2rvKA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/order/page?page=0&size=5&cashierId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"order",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "cashierId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Order by CashierId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/order/page?page=0&size=5&cashierId=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"order",
+										"page"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "cashierId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 07:13:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get all order\",\n    \"data\": [\n        {\n            \"orderId\": 1,\n            \"transactionDate\": \"2024-01-08\",\n            \"cashier\": {\n                \"id\": 1,\n                \"name\": \"shendy cashier\",\n                \"mobilePhone\": \"0877\"\n            },\n            \"listOrderDetail\": [\n                {\n                    \"orderDetailId\": 6,\n                    \"product\": {\n                        \"productId\": 2,\n                        \"productName\": \"Teh jahe\",\n                        \"price\": 1000,\n                        \"stock\": 1,\n                        \"isActive\": true\n                    },\n                    \"quantity\": 1\n                }\n            ]\n        },\n        {\n            \"orderId\": 17,\n            \"transactionDate\": \"2024-01-08\",\n            \"cashier\": {\n                \"id\": 1,\n                \"name\": \"shendy cashier\",\n                \"mobilePhone\": \"0877\"\n            },\n            \"listOrderDetail\": [\n                {\n                    \"orderDetailId\": 8,\n                    \"product\": {\n                        \"productId\": 1,\n                        \"productName\": \"nasi goreng\",\n                        \"price\": 1000,\n                        \"stock\": 5,\n                        \"isActive\": false\n                    },\n                    \"quantity\": 2\n                },\n                {\n                    \"orderDetailId\": 7,\n                    \"product\": {\n                        \"productId\": 2,\n                        \"productName\": \"Teh jahe\",\n                        \"price\": 1000,\n                        \"stock\": 1,\n                        \"isActive\": true\n                    },\n                    \"quantity\": 1\n                }\n            ]\n        },\n        {\n            \"orderId\": 17,\n            \"transactionDate\": \"2024-01-08\",\n            \"cashier\": {\n                \"id\": 1,\n                \"name\": \"shendy cashier\",\n                \"mobilePhone\": \"0877\"\n            },\n            \"listOrderDetail\": [\n                {\n                    \"orderDetailId\": 8,\n                    \"product\": {\n                        \"productId\": 1,\n                        \"productName\": \"nasi goreng\",\n                        \"price\": 1000,\n                        \"stock\": 5,\n                        \"isActive\": false\n                    },\n                    \"quantity\": 2\n                },\n                {\n                    \"orderDetailId\": 7,\n                    \"product\": {\n                        \"productId\": 2,\n                        \"productName\": \"Teh jahe\",\n                        \"price\": 1000,\n                        \"stock\": 1,\n                        \"isActive\": true\n                    },\n                    \"quantity\": 1\n                }\n            ]\n        }\n    ],\n    \"paging\": {\n        \"currentPage\": 0,\n        \"totalPage\": 4,\n        \"size\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcwNDcxNTMyOSwiaWF0IjoxNzA0NzExNzI5LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.dt3ezch0O5c0B2_MDgA88bUWHnGvAhZkdRkQKebhBak"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/order"
+					},
+					"response": [
+						{
+							"name": "Get All Order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8081/order/page?page=0&size=5&cashierId=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"order",
+										"page"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										},
+										{
+											"key": "cashierId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 07:13:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get all order\",\n    \"data\": [\n        {\n            \"orderId\": 1,\n            \"transactionDate\": \"2024-01-08\",\n            \"cashier\": {\n                \"id\": 1,\n                \"name\": \"shendy cashier\",\n                \"mobilePhone\": \"0877\"\n            },\n            \"listOrderDetail\": [\n                {\n                    \"orderDetailId\": 6,\n                    \"product\": {\n                        \"productId\": 2,\n                        \"productName\": \"Teh jahe\",\n                        \"price\": 1000,\n                        \"stock\": 1,\n                        \"isActive\": true\n                    },\n                    \"quantity\": 1\n                }\n            ]\n        },\n        {\n            \"orderId\": 17,\n            \"transactionDate\": \"2024-01-08\",\n            \"cashier\": {\n                \"id\": 1,\n                \"name\": \"shendy cashier\",\n                \"mobilePhone\": \"0877\"\n            },\n            \"listOrderDetail\": [\n                {\n                    \"orderDetailId\": 8,\n                    \"product\": {\n                        \"productId\": 1,\n                        \"productName\": \"nasi goreng\",\n                        \"price\": 1000,\n                        \"stock\": 5,\n                        \"isActive\": false\n                    },\n                    \"quantity\": 2\n                },\n                {\n                    \"orderDetailId\": 7,\n                    \"product\": {\n                        \"productId\": 2,\n                        \"productName\": \"Teh jahe\",\n                        \"price\": 1000,\n                        \"stock\": 1,\n                        \"isActive\": true\n                    },\n                    \"quantity\": 1\n                }\n            ]\n        },\n        {\n            \"orderId\": 17,\n            \"transactionDate\": \"2024-01-08\",\n            \"cashier\": {\n                \"id\": 1,\n                \"name\": \"shendy cashier\",\n                \"mobilePhone\": \"0877\"\n            },\n            \"listOrderDetail\": [\n                {\n                    \"orderDetailId\": 8,\n                    \"product\": {\n                        \"productId\": 1,\n                        \"productName\": \"nasi goreng\",\n                        \"price\": 1000,\n                        \"stock\": 5,\n                        \"isActive\": false\n                    },\n                    \"quantity\": 2\n                },\n                {\n                    \"orderDetailId\": 7,\n                    \"product\": {\n                        \"productId\": 2,\n                        \"productName\": \"Teh jahe\",\n                        \"price\": 1000,\n                        \"stock\": 1,\n                        \"isActive\": true\n                    },\n                    \"quantity\": 1\n                }\n            ]\n        }\n    ],\n    \"paging\": {\n        \"currentPage\": 0,\n        \"totalPage\": 4,\n        \"size\": 5\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get All Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/admin"
+					},
+					"response": [
+						{
+							"name": "Get All Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/admin"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 15:22:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get all admin\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"baim admin\",\n            \"phoneNumber\": \"08\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"sep\",\n            \"phoneNumber\": \"08138699\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"sep\",\n            \"phoneNumber\": \"0813869977\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"tiar cashier\",\n            \"phoneNumber\": \"0877094567\"\n        }\n    ],\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcxMDQzMzc1MiwiaWF0IjoxNzEwNDMwMTUyLCJyb2xlIjoiUk9MRV9BRE1JTiJ9.2kho3wBNG1832p5Qw4VT_AAxw2hQG2ORqVMtcgIy3M0"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"name\" : \"baim muh\",\n    \"phoneNumber\" : \"080811\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/admin"
+					},
+					"response": [
+						{
+							"name": "Update Admin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\" : 1,\n    \"name\" : \"baim muh\",\n    \"phoneNumber\" : \"080811\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/admin"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 15:31:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully update admin\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"baim muh\",\n        \"phoneNumber\": \"080811\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/admin/1"
+					},
+					"response": [
+						{
+							"name": "Get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/admin/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 15:23:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get by id admin\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"baim admin\",\n        \"phoneNumber\": \"08\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cashier",
+			"item": [
+				{
+					"name": "Get All Cashier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/cashier"
+					},
+					"response": [
+						{
+							"name": "Get All Cashier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/cashier"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 15:24:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get all cashier\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"shendy cashier\",\n            \"mobilePhone\": \"0877\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"tiar cashier 3\",\n            \"mobilePhone\": \"08770945678\"\n        }\n    ],\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Cashier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmRlcmluIEFwcCIsInN1YiI6IjFkOGNjMDJjLWRkNDgtNDc2Ny05NjMwLWYzNzgzNzU3MTAwYiIsImV4cCI6MTcxMDQzMzc1MiwiaWF0IjoxNzEwNDMwMTUyLCJyb2xlIjoiUk9MRV9BRE1JTiJ9.2kho3wBNG1832p5Qw4VT_AAxw2hQG2ORqVMtcgIy3M0"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"name\" : \"shendy\",\n    \"phoneNumber\" : \"08779898\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/cashier"
+					},
+					"response": [
+						{
+							"name": "Update Cashier",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\" : 1,\n    \"name\" : \"shendy\",\n    \"phoneNumber\" : \"08779898\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/cashier"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 15:29:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully update admin\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"shendy\",\n        \"mobilePhone\": \"08779898\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/cashier/1"
+					},
+					"response": [
+						{
+							"name": "Get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/cashier/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Mar 2024 15:24:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get by id cashier\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"shendy cashier\",\n        \"mobilePhone\": \"0877\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
